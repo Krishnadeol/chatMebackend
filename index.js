@@ -13,6 +13,10 @@ app.use("/auth", require("./routes/auth"));
 app.use("/setA", require("./routes/setA"));
 app.use("/getcontacts", require("./routes/getc"));
 
+app.get("/", (req, res) => {
+  res.send("The Site is Live for chat app");
+});
+
 const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}  for chat app`)
 );
