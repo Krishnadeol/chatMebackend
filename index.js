@@ -13,6 +13,14 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
+const router = express.Router();
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // you wiil find the collextion at this route
+
+app.use(router);
+
 app.use(cors(corsOptions));
 
 app.use("/message", require("./routes/message"));
