@@ -2,7 +2,7 @@ const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: {
-    title: "POTION APP APIs",
+    title: "Chat app APIs",
     description: "Description",
   },
   host: "chatappbackup.onrender.com",
