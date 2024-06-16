@@ -9,7 +9,7 @@ app.use(express.json());
 // routes =>
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://chatmefrontend.onrender.com",
   optionsSuccessStatus: 200,
 };
 
