@@ -8,6 +8,13 @@ app.use(express.json());
 
 // routes =>
 
+const corsOptions = {
+  origin: "http://localhost:5173",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 app.use("/message", require("./routes/message"));
 app.use("/auth", require("./routes/auth"));
 app.use("/setA", require("./routes/setA"));
